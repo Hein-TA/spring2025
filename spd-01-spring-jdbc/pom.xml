@@ -6,12 +6,18 @@
 	<artifactId>spd-01-spring-jdbc</artifactId>
 	<version>1.0.0</version>
 	<packaging>pom</packaging>
+	
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>3.3.3</version>
+		<relativePath/>
+	</parent>
 
 	<dependencies>
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>
 			<artifactId>junit-jupiter</artifactId>
-			<version>5.10.3</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
@@ -21,7 +27,6 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.13.0</version>
 				<configuration>
 					<release>21</release>
 				</configuration>
@@ -30,5 +35,9 @@
 	</build>
 	<modules>
 		<module>pj01-using-pure-jdbc</module>
+		<module>pj02-spring-jdbc-xml</module>
+		
+		<module>pj03-spring-jdbc-java</module>
+		<module>pj04-spring-jdbc-boot</module>
 	</modules>
 </project>
